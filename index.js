@@ -5,6 +5,7 @@ const cors = require('cors');
 
 app.use(cors());
 app.use(express.json());
+app.use(express.static('dist'));
 
 // Kustomoitu tokeni, joka palauttaa pyynnön sisällön
 morgan.token('content', function (req, res) {
